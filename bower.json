@@ -1,0 +1,10 @@
+{
+  "name": "mean-template",
+  "version": "0.0.0",
+  "homepage": "https://github.com/chyld/mean-template",
+  "authors": [
+    "Chyld Medford <chyld.medford@gmail.com>"
+  ],
+  "description": "The MEAN Template",
+  "license": "MIT"
+}
