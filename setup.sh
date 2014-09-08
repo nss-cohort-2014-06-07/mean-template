@@ -32,6 +32,7 @@ npm install jshint-stylish --save-dev
 # installing new bower components
 bower install angular#1.3.0-rc.0 --save
 bower install bootstrap --save
+bower install fontawesome --save
 
 # adding files to new git repository
 git add .

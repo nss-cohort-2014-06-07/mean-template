@@ -70,6 +70,12 @@ module.exports = function(grunt){
         src: ['**/*'],
         dest: 'public/assets',
         expand: true
+      },
+      favicon: {
+        cwd: 'client',
+        src: ['favicon.ico'],
+        dest: 'public',
+        expand: true
       }
     }
     // ---------------------------------------------------------------------- //
@@ -85,7 +91,7 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-shell');
 
   grunt.registerTask('deploy', ['clean', 'build', 'shell:bower']);
-  grunt.registerTask('build', ['jshint:all', 'jscs', 'jade', 'less', 'copy:js', 'copy:assets']);
+  grunt.registerTask('build', ['jshint:all', 'jscs', 'jade', 'less', 'copy:js', 'copy:assets', 'copy:favicon']);
   grunt.registerTask('default', ['build', 'watch']);
 };
 
