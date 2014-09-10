@@ -15,8 +15,19 @@ sudo rm -rf ~/.npm
 rm -rf node_modules
 
 # installing new node modules
+npm install async --save
+npm install body-parser --save
 npm install express --save
+npm install express-method-override --save
+npm install underscore --save
+npm install mongodb --save
 npm install morgan --save
+npm install multiparty --save
+npm install express-session --save
+npm install connect-redis --save
+npm install bcrypt --save
+npm install chalk --save
+npm install request --save
 
 npm install grunt --save-dev
 npm install grunt-contrib-clean --save-dev
@@ -31,8 +42,11 @@ npm install jshint-stylish --save-dev
 
 # installing new bower components
 bower install angular#1.3.0-rc.0 --save
+bower install angular-route#1.3.0-rc.0 --save
 bower install bootstrap --save
 bower install fontawesome --save
+bower install underscore --save
+bower install jquery --save
 
 # adding files to new git repository
 git add .

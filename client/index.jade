@@ -8,17 +8,19 @@ html(ng-app='mean-template', lang='en')
     link(href='/vendor/bootstrap/dist/css/bootstrap.css', rel='stylesheet')
     link(href='/vendor/fontawesome/css/font-awesome.css', rel='stylesheet')
     link(href='/index.css', rel='stylesheet')
-  body(ng-controller='MainController')
+  body
+    include nav
     .container
       .row
         .col-xs-12
-          h1 {{title}}
-          h2
-            span Web Development for &nbsp;
-            em: u {{occupation}}
+          #container(ng-view)
 
     script(src='/vendor/angular/angular.js')
+    script(src='/vendor/angular-route/angular-route.js')
     script(src='/vendor/jquery/dist/jquery.js')
     script(src='/vendor/bootstrap/dist/js/bootstrap.js')
+    script(src='/vendor/underscore/underscore.js')
     script(src='/index.js')
+    script(src='/views/home/home.js')
+    script(src='/components/home.js')
 

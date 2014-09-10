@@ -1,11 +1,16 @@
 'use strict';
 
 var port    = process.env.PORT,
+    db      = process.env.DB,
     express = require('express'),
-    morgan  = require('morgan'),
     app     = express();
 
-app.use(morgan('dev'));
-app.use(express.static(__dirname + '/../public'));
-app.listen(port);
+require('./lib/config')(app);
+require('./routes/routes')(app, express);
+
+require('./lib/mongodb')(db, function(){
+  app.listen(port);
+});
+
+module.exports = app;
 
