@@ -4,12 +4,12 @@
   "description": "The MEAN Template",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chyld/mean-template"
+    "url": "https://github.com/nss-cohort-2014-06-07/mean-template"
   },
   "author": "Chyld Medford <chyld.medford@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chyld/mean-template/issues"
+    "url": "https://github.com/nss-cohort-2014-06-07/mean-template/issues"
   },
-  "homepage": "https://github.com/chyld/mean-template"
+  "homepage": "https://github.com/nss-cohort-2014-06-07/mean-template"
 }
