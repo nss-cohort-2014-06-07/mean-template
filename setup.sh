@@ -41,8 +41,8 @@ npm install grunt-shell --save-dev
 npm install jshint-stylish --save-dev
 
 # installing new bower components
-bower install angular#1.3.0-rc.0 --save
-bower install angular-route#1.3.0-rc.0 --save
+bower install angular#1.3.0-rc.1 --save
+bower install angular-route#1.3.0-rc.1 --save
 bower install bootstrap --save
 bower install fontawesome --save
 bower install underscore --save
