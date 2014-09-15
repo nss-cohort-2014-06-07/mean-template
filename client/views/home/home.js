@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('mean-template')
+  angular.module('yum.my')
   .controller('HomeCtrl', ['$scope', '$interval', 'Home', function($scope, $interval, Home){
     Home.getMessage().then(function(response){
       $scope.mean = response.data.mean;
