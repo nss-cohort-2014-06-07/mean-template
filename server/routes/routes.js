@@ -21,6 +21,7 @@ module.exports = function(app, express){
 
   app.get('/home', home.index);
   app.post('/register', users.register);
+  app.post('/login', users.login);
 
   console.log('Express: Routes Loaded');
 };

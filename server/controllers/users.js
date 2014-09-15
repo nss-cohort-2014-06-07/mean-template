@@ -12,3 +12,13 @@ exports.register = function(req, res){
   });
 };
 
+exports.login = function(req, res){
+  User.login(req.body, function(err, user){
+    if(user){
+      res.send(200);
+    }else{
+      res.send(401);
+    }
+  });
+};
+
