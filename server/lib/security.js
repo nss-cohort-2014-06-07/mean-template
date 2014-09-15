@@ -10,3 +10,11 @@ exports.authenticate = function(req, res, next){
   });
 };
 
+exports.bounce = function(req, res, next){
+  if(req.user){
+    next();
+  }else{
+    res.status(401).end();
+  }
+};
+

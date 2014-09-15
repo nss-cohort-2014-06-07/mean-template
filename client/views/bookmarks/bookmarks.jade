@@ -9,3 +9,6 @@ h3 Bookmarks
       button.btn.btn-primary(ng-show='categoryForm.$valid', ng-click='addCategory()') Add Category
   .col-xs-9
 
+ul
+  li(ng-repeat='category in categories') {{category.name}}
+
