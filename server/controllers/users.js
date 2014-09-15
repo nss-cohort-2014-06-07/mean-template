@@ -28,3 +28,10 @@ exports.login = function(req, res){
   });
 };
 
+exports.logout = function(req, res){
+  req.session.destroy(function(){
+    res.setHeader('X-Authenticated-User', 'anonymous');
+    res.status(200).end();
+  });
+};
+

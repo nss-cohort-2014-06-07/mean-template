@@ -1,4 +1,4 @@
-.navbar.navbar-default(role='navigation')
+.navbar.navbar-default(role='navigation', ng-controller='NavCtrl')
   .container
     .navbar-header
       button.navbar-toggle(data-toggle='collapse', data-target='#bs-navbar-collapse')
@@ -9,8 +9,11 @@
       a.navbar-brand(href='/') yum.my
 
     .collapse.navbar-collapse#bs-navbar-collapse
-      ul.nav.navbar-nav.navbar-right
+      ul.nav.navbar-nav.navbar-right(ng-hide='email')
         li: a(href='/#/') Home
         li: a(href='/#/register') Register
         li: a(href='/#/login') Login
+      ul.nav.navbar-nav.navbar-right(ng-show='email')
+        li: a(href='/#/') Home
+        li: a(href='/#/logout') {{email}}
 
