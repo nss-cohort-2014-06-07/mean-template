@@ -5,9 +5,9 @@ var User = require('../models/user');
 exports.register = function(req, res){
   User.register(req.body, function(err, user){
     if(user){
-      res.send(200);
+      res.status(200).end();
     }else{
-      res.send(400);
+      res.status(400).end();
     }
   });
 };
@@ -15,9 +15,15 @@ exports.register = function(req, res){
 exports.login = function(req, res){
   User.login(req.body, function(err, user){
     if(user){
-      res.send(200);
+      req.session.regenerate(function(){
+        req.session.userId = user._id;
+        req.session.save(function(){
+          res.setHeader('X-Authenticated-User', user.email);
+          res.status(200).end();
+        });
+      });
     }else{
-      res.send(401);
+      res.status(401).end();
     }
   });
 };

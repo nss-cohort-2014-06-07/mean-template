@@ -6,11 +6,13 @@
     $scope.user = {};
 
     function success(response){
-      debugger;
+      toastr.success('Successful login.');
+      $location.path('/');
     }
 
     function failure(response){
-      debugger;
+      toastr.error('Error during login, try again.');
+      $scope.user = {};
     }
 
     $scope.login = function(){
