@@ -1,14 +1,43 @@
-h3 Bookmarks
+.row
+  .col-xs-3
+    h3 Categories
+    form(role='form', novalidate, name='categoryForm')
+      .form-group
+        input.form-control#name(type='text', name='name', ng-model='name', autofocus, required, placeholder='Name')
+      .form-group
+        button.btn.btn-primary(ng-show='categoryForm.$valid', ng-click='addCategory()') Add
+  .col-xs-9
+    h3 Bookmarks
+    .row
+      .col-xs-4
+        form(role='form', novalidate, name='bookmarkForm')
+          .form-group
+            input.form-control#title(type='text', name='title', ng-model='bookmark.title', autofocus, required, placeholder='Title')
+          .form-group
+            input.form-control#url(type='url', name='url', ng-model='bookmark.url', required, placeholder='Url')
+          .form-group
+            input.form-control#date(type='date', name='date', ng-model='bookmark.date', required)
+          .form-group
+            select.form-control(name='categoryId', ng-model='bookmark.categoryId', ng-options='c._id as c.name for c in categories | orderBy:"name"', required)
+              option(value='') Select Category
+          .form-group
+            button.btn.btn-primary(ng-show='bookmarkForm.$valid', ng-click='addBookmark()') Add
+      .col-xs-8
 
 .row
   .col-xs-3
-    form(role='form', novalidate, name='categoryForm')
-      .form-group
-        label(for='name') Name
-        input.form-control#name(type='text', name='name', ng-model='name', autofocus, required)
-      button.btn.btn-primary(ng-show='categoryForm.$valid', ng-click='addCategory()') Add Category
+    #categories
+      .category(ng-class='{active:category.isActive}', ng-repeat='category in categories', ng-mouseover='filterBookmarks(category._id);markActive(category);') {{category.name}}
   .col-xs-9
-
-ul
-  li(ng-repeat='category in categories') {{category.name}}
+    table#bookmarks.table.table-bordered.table-striped
+      thead
+        tr
+          th Title
+          th URL
+          th Date
+      tbody
+        tr(ng-repeat='bookmark in filtered')
+          td: a(ng-href='{{bookmark.url}}', target='_blank') {{bookmark.title}}
+          td {{bookmark.url}}
+          td {{bookmark.date | date}}
 

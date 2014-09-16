@@ -2,7 +2,31 @@ body{
   background-color: #ffdc00;
 }
 
-input.ng-invalid{
+input.ng-invalid, select.ng-invalid{
   background-color: #FF4136;
+}
+
+#categories{
+  border: 3px double #111111;
+  padding: 10px;
+  background-color: #FFFFFF;
+}
+
+#bookmarks{
+  border: 3px double #111111;
+  background-color: #FFFFFF;
+
+  th:nth-child(1){
+    width: 35%;
+  }
+
+  th:nth-child(2){
+    width: 35%;
+  }
+}
+
+.active{
+  background-color: #0074D9;
+  color: #ffffff;
 }
 
