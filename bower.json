@@ -6,5 +6,7 @@
     "Chyld Medford <chyld.medford@gmail.com>"
   ],
   "description": "The MEAN Template",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+  }
 }

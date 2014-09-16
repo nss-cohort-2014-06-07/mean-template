@@ -11,5 +11,9 @@
   "bugs": {
     "url": "https://github.com/nss-cohort-2014-06-07/mean-template/issues"
   },
-  "homepage": "https://github.com/nss-cohort-2014-06-07/mean-template"
+  "homepage": "https://github.com/nss-cohort-2014-06-07/mean-template",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
 }
