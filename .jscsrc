@@ -28,7 +28,6 @@
   "requireCommaBeforeLineBreak": true,
   "disallowMultipleLineStrings": true,
   "validateQuoteMarks": { "mark": "'", "escape": true },
-  "validateIndentation": 2,
   "disallowMixedSpacesAndTabs": true,
   "disallowTrailingWhitespace": true,
   "disallowTrailingComma": true,
